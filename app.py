@@ -12,11 +12,11 @@ app.secret_key = os.getenv('SECRET_KEY', secrets.token_hex(32))
 app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER', 'smtp.gmail.com')
 app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT', 587))
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME', 'nayab.webdeveloper@gmail.com')
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME', 'example@gmail.com')
 if not app.config['MAIL_USERNAME']:
     raise ValueError("MAIL_USERNAME environment variable is not set")
 
-app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD', 'uycb wjbq gbue kivs')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD', 'aaaa bbbb cccc dddd')
 if not app.config['MAIL_PASSWORD']:
     raise ValueError("MAIL_PASSWORD environment variable is not set")
 
