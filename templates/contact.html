@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Nayab Ali for web development projects, freelance work and collaboration.">
+    <meta name="author" content="Nayab Ali">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact | Nayab Ali">
+    <meta property="og:description" content="Get in touch with Nayab Ali for WordPress, Python Flask and web development projects.">
+    <meta property="og:image" content="{{ url_for('static', filename='image/og-image.png', _external=True) }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact | Nayab Ali">
+    <meta name="twitter:description" content="Get in touch with Nayab Ali for WordPress, Python Flask and web development projects.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='image/og-image.png', _external=True) }}">
+    <title>Contact | Nayab Ali</title>
+    <link rel="icon" href="{{ url_for('static', filename='image/favicon.ico') }}" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='image/favicon-32x32.png') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='image/apple-touch-icon.png') }}">
+</head>
+<body>
+  {% extends 'index.html' %}
+
+
+  {% block content %}
+  <!-- HERO -->
+  <div class="hero hero-contact">
+    <div class="status">
+      <span class="status-dot"></span>
+      Get In Touch
+    </div>
+    <h2 style="transition-delay:0.06s;">Let's Build Something Great Together.</h2>
+    <p class="tagline" style="transition-delay:0.12s">Have a project in mind? I would love to hear about it.</p>
+  </div>
+
+  <div class="contact-page" style="margin-top: -100px;">
+
+    <div class="info-cards">
+
+      <div class="info-card card reveal" style="transition-delay:0.05s">
+        <div class="info-icon"><i class="fa-regular fa-envelope"></i></div>
+        <div class="info-label">Email</div>
+        <div class="info-value email">nayab.webdeveloper@gmail.com</div>
+        <div class="status info-badge">
+          <span class="status-dot "></span>
+          Replies within 24hrs
+        </div>
+      </div>
+
+      <div class="info-card card reveal" style="transition-delay:0.15s">
+        <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+        <div class="info-label">Availability</div>
+        <div class="info-value">Monday to Friday</div>
+        <div class="status info-badge">
+          <span class="status-dot"></span>
+          Currently Available
+        </div>
+      </div>
+
+      <div class="info-card card reveal" style="transition-delay:0.25s">
+        <div class="info-icon"><i class="fa-regular fa-circle-dot"></i></div>
+        <div class="info-label">Location</div>
+        <div class="info-value">Available Worldwide</div>
+        <div class="status info-badge">
+          <span class="status-dot"></span>
+          Remote Friendly
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="contact-form-section">
+
+    <!-- LEFT -->
+    <div class="contact-left scroll-reveal">
+      <div class="status">
+        <span class="status-dot"></span>
+        Send A Message
+      </div>
+      <h2>Start a<br>conversation.</h2>
+      <p class="contact-left-desc">Whether you have a project, a question or just want to say hello — my inbox is always
+        open.</p>
+
+      <div class="contact-info-list">
+        <div class="contact-info-list-item email">
+          <i class="fa-regular fa-envelope"></i>
+          nayab.webdeveloper@gmail.com
+        </div>
+        <div class="contact-info-list-item">
+          <i class="fa-solid fa-phone"></i>
+          +91 96500-333-49
+        </div>
+        <div class="contact-info-list-item">
+          <i class="fa-regular fa-map"></i>
+          Available Worldwide · Remote
+        </div>
+      </div>
+
+      <p class="follow-label">Follow Me</p>
+      <div class="follow-icons">
+        <a href="https://github.com/nayab-ali" aria-label="GitHub Profile" class="follow-icon"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/nayab-ali-619a55279" aria-label="LinkedIn Profile" class="follow-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/letus_development/" aria-label="Instagram Profile" class="follow-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.upwork.com/freelancers/~010ab8db40938bb3e0?mp_source=share" aria-label="UpWork Profile" class="follow-icon"><i class="fa-brands fa-upwork"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT — form uses .card base -->
+    <div class="reveal" style="transition-delay:0.15s" id="contact">
+      <form class="card form-card" id="contact" action="/contact" method="POST">
+
+        <h3>Send a message.</h3>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                <p class="alert alert-{{ category }}">{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+        <div class="form-row">
+          <div class="form-field form-field-contact">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-field form-field-contact">
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+        </div>
+
+        <div class="form-field form-field-contact">
+          <input type="text" name="subject" placeholder="Your Subject" required />
+        </div>
+
+        <div class="form-field form-field-contact textarea-field">
+          <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+        </div>
+          
+          <button type="submit" class="send-btn .send-btn-contact">
+            Send Message
+            <svg class="send-arrow" width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <path d="M2 6.5h9M7 2.5l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+
+      </form>
+      <p class="response-note">Usually responds within 24 hours</p>
+    </div>
+
+  </div>
+  {% endblock %}
+
+  {% block code %}
+  <script>
+    // Hamburger menu
+        const menuBtn = document.getElementById('menuBtn');
+        const drawer = document.getElementById('mobileDrawer');
+        menuBtn.addEventListener('click', () => {
+            const isOpen = drawer.classList.toggle('open');
+            menuBtn.classList.toggle('open', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+        drawer.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                drawer.classList.remove('open');
+                menuBtn.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
+      // Custom cursor
+      const cursor = document.getElementById('cursor');
+      const ring = document.getElementById('cursorRing');
+      let mx = 0, my = 0, rx = 0, ry = 0;
+      document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        cursor.style.left = mx + 'px';
+        cursor.style.top = my + 'px';
+      });
+      (function animateRing() {
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        requestAnimationFrame(animateRing);
+      })();
+      document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+      });
+
+      // Scroll reveal
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+        });
+      }, { threshold: 0.1 });
+      reveals.forEach(el => observer.observe(el));
+      setTimeout(() => {
+        reveals.forEach(el => {
+          if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+        });
+      }, 100);
+
+      
+      document.addEventListener('DOMContentLoaded', () => {
+            const section = '{{ section or active_section }}';  // Use active_section as fallback
+            if (section && section === 'contact') {
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }
+      });
+
+      // Toggle card open/close
+        waBtn.addEventListener('click', () => {
+            const isOpen = waCard.classList.contains('open');
+            if (isOpen) {
+                waCard.classList.remove('open');
+            } else {
+                waCard.classList.add('open');
+                waTooltip.style.opacity = '0';
+            }
+        });
+        
+        // Close button
+        waClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            waCard.classList.remove('open');
+        });
+        
+        // Show tooltip on hover only when card is closed
+        waBtn.addEventListener('mouseenter', () => {
+            if (!waCard.classList.contains('open')) {
+                waTooltip.style.opacity = '1';
+                waTooltip.style.transform = 'translateY(0)';
+            }
+        });
+        
+        waBtn.addEventListener('mouseleave', () => {
+            waTooltip.style.opacity = '0';
+            waTooltip.style.transform = 'translateY(4px)';
+        });
+  </script>
+  {% endblock %}
+</body>
+</html>

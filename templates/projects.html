@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore web development projects built with WordPress, Python, Flask, HTML and CSS by Nayab Ali.">
+    <meta name="author" content="Nayab Ali">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects | Nayab Ali">
+    <meta property="og:description" content="Explore my Python, Flask, HTML/CSS and WordPress projects built for businesses and clients.">
+    <meta property="og:image" content="{{ url_for('static', filename='image/og-image.png', _external=True) }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Nayab Ali">
+    <meta name="twitter:description" content="Explore my Python, Flask, HTML/CSS and WordPress projects built for businesses and clients.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='image/og-image.png', _external=True) }}">
+    <title>Projects | Nayab Ali - Web Development Portfolio</title>
+    <link rel="icon" href="{{ url_for('static', filename='image/favicon.ico') }}" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='image/favicon-32x32.png') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='image/apple-touch-icon.png') }}">
+</head>
+<body>
+    {% extends 'index.html' %}
+
+    {% block content %}
+    <!-- PAGE HEADER -->
+    <!-- PAGE HEADER -->
+    <div class="hero hero-project">
+      
+        <div class="status">
+            <span class="status-dot"></span>
+                My PROJECTS
+        </div>
+        <h2 style="transition-delay:0.06s">Projects I’ve Built.</h2>
+        <p class="tagline" style="transition-delay:0.12s">A selection of websites and web applications across different web technologies.</p>
+
+        <!-- FILTER BAR -->
+        <div class="filter-bar reveal" style="transition-delay:0.6s;">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="wordpress">WordPress</button>
+            <button class="filter-btn" data-filter="html-css">HTML &amp; CSS</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="contribution">Contribution</button>
+        </div>
+    </div>
+
+    <!-- PROJECTS GRID -->
+    <div class="projects-page" style="margin-top: -100px;">
+        <div class="projects-grid">
+
+            <!-- 1 -->
+            <div class="project-item reveal" data-category="wordpress" style="transition-delay:0.25s">
+                <div class="card">
+                    <div class="project-card-preview">
+                        <img src="../static/image/wordpress-uniquedeal.png" alt="Fashion Store" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="card-tag">WordPress</span>
+                        <div class="card-title">Business Export Services</div>
+                        <p class="card-desc">WordPress business website for exporting flowers, grains, spices and other agricultural products.</p>
+                        <div class="card-footer">
+                            <span class="card-year">2025</span>
+                            <a href="https://uniqueglobaldeal.com/" class="card-link" target="_blank" rel="noopener noreferrer">View Project <svg width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="project-item reveal" data-category="python" style="transition-delay:0.15s">
+                <div class="card">
+                    <div class="project-card-preview">
+                        <img src="../static/image/appointmentsys-home.png"
+                            alt="Appointment Management System" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="card-tag">Python • Flask • MySQL</span>
+                        <div class="card-title">Appointment Management System</div>
+                        <p class="card-desc">A Python-based system for managing teacher–student appointments with an integrated admin dashboard.</p>
+                        <div class="card-footer">
+                            <span class="card-year">2024</span>
+                            <a href="https://github.com/nayab-ali/AppointmentSys" class="card-link" target="_blank" rel="noopener noreferrer">View Project <svg width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="project-item reveal" data-category="wordpress" style="transition-delay:0.25s">
+                <div class="card">
+                    <div class="project-card-preview">
+                        <img src="../static/image/buzo-puppy-ecommerce.png"
+                            alt="E-commerce Website" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="card-tag">WordPress • WooCommerce</span>
+                        <div class="card-title">BUZO Puppy Center E-Commerce Website</div>
+                        <p class="card-desc">WooCommerce website for a pet store offering puppies, pet food, accessories and secure online shopping.</p>
+                        <div class="card-footer">
+                            <span class="card-year">2026</span>
+                            <a href="https://buzopuppycenter.in/" class="card-link" target="_blank" rel="noopener noreferrer">View Project <svg width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="project-item reveal" data-category="wordpress" style="transition-delay:0.15s">
+                <div class="card">
+                    <div class="project-card-preview">
+                        <img src="../static/image/wordpress-actor.png"
+                            alt="Actor Portfolio Website" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="card-tag">WordPress</span>
+                        <div class="card-title">Actor Portfolio Website</div>
+                        <p class="card-desc">Portfolio website for an actor and storyteller to showcase work, biography and media projects.</p>
+                        <div class="card-footer">
+                            <span class="card-year">2025</span>
+                            <a href="https://shauryaversejwal.com/" class="card-link" target="_blank" rel="noopener noreferrer">View Project <svg width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="project-item reveal" data-category="wordpress" style="transition-delay:0.15s">
+                <div class="card">
+                    <div class="project-card-preview">
+                        <img src="../static/image/wordpress-earhearing.png"
+                            alt="WordPress Website" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="card-tag">WordPress</span>
+                        <div class="card-title">Business Website</div>
+                        <p class="card-desc">Custom WordPress website designed for a service-based business with responsive layout.</p>
+                        <div class="card-footer">
+                            <span class="card-year">2025</span>
+                            <a href="https://earhearingandspeechsolutions.com/" class="card-link" target="_blank" rel="noopener noreferrer">View Project <svg width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="project-item reveal" data-category="python" style="transition-delay:0.15s">
+                <div class="card">
+                    <div class="project-card-preview">
+                        <img src="../static/image/python-portfolio.png"
+                            alt="Portfolio Website" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="card-tag">HTML • CSS • Python</span>
+                        <div class="card-title">Portfolio Website</div>
+                        <p class="card-desc">Graphic Designer & Video Editor portfolio designed with HTML, CSS and modern responsive layout.</p>
+                        <div class="card-footer">
+                            <span class="card-year">2025</span>
+                            <a href="https://laraib-ansari.vercel.app/" class="card-link" target="_blank" rel="noopener noreferrer">View Project <svg width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 7 -->
+            <div class="project-item reveal" data-category="wordpress" style="transition-delay:0.25s">
+                <div class="card">
+                    <div class="project-card-preview">
+                        <img src="../static/image/cyber-cafe-Webste.png"
+                            alt="E-commerce Website" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="card-tag">WordPress • WooCommerce</span>
+                        <div class="card-title">Cyber Cafe E-Commerce Store</div>
+                        <p class="card-desc">WooCommerce store built for a cyber cafe, offering stationery, office supplies, snacks and everyday essentials online.</p>
+                        <div class="card-footer">
+                            <span class="card-year">2026</span>
+                            <a href="https://cybercafebbaustore.in/" class="card-link" target="_blank" rel="noopener noreferrer">View Project <svg width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 8 -->
+            <div class="project-item reveal" data-category="html-css" style="transition-delay:0.15s">
+                <div class="card">
+                    <div class="project-card-preview">
+                        <img src="../static/image/htmlcss-landingpage.png"
+                            alt="Landing Page Website" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="card-tag">HTML • CSS</span>
+                        <div class="card-title">Landing Page Website</div>
+                        <p class="card-desc">Conversion-focused landing page built using HTML and CSS with responsive design.</p>
+                        <div class="card-footer">
+                            <span class="card-year">2024</span>
+                            <a href="https://compliance-webs.vercel.app/" class="card-link" target="_blank" rel="noopener noreferrer">View Project <svg width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 9 -->
+            <div class="project-item reveal" data-category="contribution" style="transition-delay:0.15s">
+                <div class="card">
+                    <div class="project-card-preview">
+                        <img src="../static/image/wordpress-practicalrecovery.png"
+                            alt="Practical Recovery" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="card-tag">WordPress • Contribution</span>
+                        <div class="card-title">Practical Recovery</div>
+                        <p class="card-desc">Contributed to the new Practical Recovery website by matching legacy URLs from the 12-year-old website.</p>
+                        <div class="card-footer">
+                            <span class="card-year">2026</span>
+                            <a href="https://www.practicalrecovery.com/" class="card-link" target="_blank" rel="noopener noreferrer">View Project <svg width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 10 -->
+            <div class="project-item reveal" data-category="wordpress" style="transition-delay:0.15s">
+                <div class="card">
+                    <div class="project-card-preview">
+                        <img src="../static/image/Fiybro-website.png"
+                            alt="Fiybro Pipes Manufacture" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="card-tag">WordPress</span>
+                        <div class="card-title">Fiybro Pipes Manufacturing Website</div>
+                        <p class="card-desc">Corporate WordPress website for an HDPE pipe manufacturer, showcasing products, applications and company information with a modern responsive design.</p>
+                        <div class="card-footer">
+                            <span class="card-year">2026</span>
+                            <a href="https://fiybro.com/" class="card-link" target="_blank" rel="noopener noreferrer">View Project <svg width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 11 -->
+            <div class="project-item reveal" data-category="contribution" style="transition-delay:0.15s">
+                <div class="card">
+                    <div class="project-card-preview">
+                        <img src="../static/image/wordpress-utsi.png"
+                            alt="UTSI" loading="lazy" decoding="async"/>
+                    </div>
+                    <div class="project-card-body">
+                        <span class="card-tag">WordPress • Contribution</span>
+                        <div class="card-title">UTSI</div>
+                        <p class="card-desc">Improved frontend layout by fixing post card alignment and updating content including posts and images.</p>
+                        <div class="card-footer">
+                            <span class="card-year">2026</span>
+                            <a href="https://utsi.com/" class="card-link" target="_blank" rel="noopener noreferrer">View Project <svg width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOAD MORE -->
+        <div class="load-more-wrap reveal">
+            <a href="#" class="cta" id="loadMore">
+                Load More Projects
+                <svg class="cta-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    {% endblock %}
+
+    {% block code %}
+
+    <script>
+        // Hamburger menu
+        const menuBtn = document.getElementById('menuBtn');
+        const drawer = document.getElementById('mobileDrawer');
+        menuBtn.addEventListener('click', () => {
+            const isOpen = drawer.classList.toggle('open');
+            menuBtn.classList.toggle('open', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+        drawer.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                drawer.classList.remove('open');
+                menuBtn.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Custom cursor
+        const cursor = document.getElementById('cursor');
+        const ring   = document.getElementById('cursorRing');
+        let mx = 0, my = 0, rx = 0, ry = 0;
+        document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        cursor.style.left = mx + 'px';
+        cursor.style.top  = my + 'px';
+        });
+        (function animateRing() {
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx + 'px';
+        ring.style.top  = ry + 'px';
+        requestAnimationFrame(animateRing);
+        })();
+        document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+        });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+        setTimeout(() => {
+        reveals.forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+        });
+        }, 100);
+
+        // Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+
+            projectItems.forEach(item => {
+            if (filter === 'all' || item.dataset.category === filter) {
+                item.classList.remove('hidden');
+            } else {
+                item.classList.add('hidden');
+            }
+            });
+            updateProjects();
+        });
+        });
+
+        // Toggle card open/close
+        waBtn.addEventListener('click', () => {
+            const isOpen = waCard.classList.contains('open');
+            if (isOpen) {
+                waCard.classList.remove('open');
+            } else {
+                waCard.classList.add('open');
+                waTooltip.style.opacity = '0';
+            }
+        });
+        
+        // Close button
+        waClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            waCard.classList.remove('open');
+        });
+        
+        // Show tooltip on hover only when card is closed
+        waBtn.addEventListener('mouseenter', () => {
+            if (!waCard.classList.contains('open')) {
+                waTooltip.style.opacity = '1';
+                waTooltip.style.transform = 'translateY(0)';
+            }
+        });
+        
+        waBtn.addEventListener('mouseleave', () => {
+            waTooltip.style.opacity = '0';
+            waTooltip.style.transform = 'translateY(4px)';
+        });
+
+        const loadMoreBtn = document.getElementById("loadMore");
+
+        const INITIAL_VISIBLE = 6;
+
+        function updateProjects() {
+
+            const activeFilter = document.querySelector(".filter-btn.active").dataset.filter;
+
+            const visibleProjects = [...projectItems].filter(item => {
+                return activeFilter === "all" || item.dataset.category === activeFilter;
+            });
+
+            projectItems.forEach(item => item.classList.remove("load-hidden"));
+
+            visibleProjects.forEach((item, index) => {
+                if (index >= INITIAL_VISIBLE) {
+                    item.classList.add("load-hidden");
+                }
+            });
+
+            if (visibleProjects.length <= INITIAL_VISIBLE) {
+                loadMoreBtn.parentElement.style.display = "none";
+            } else {
+                loadMoreBtn.parentElement.style.display = "flex";
+                loadMoreBtn.textContent = "Load More Projects";
+                loadMoreBtn.dataset.expanded = "false";
+            }
+        }
+
+        updateProjects();
+
+        loadMoreBtn.addEventListener("click", function(e){
+
+            e.preventDefault();
+
+            const expanded = this.dataset.expanded === "true";
+
+            const activeFilter = document.querySelector(".filter-btn.active").dataset.filter;
+
+            const visibleProjects = [...projectItems].filter(item=>{
+                return activeFilter==="all" || item.dataset.category===activeFilter;
+            });
+
+            if(!expanded){
+
+                visibleProjects.forEach(item=>{
+                    item.classList.remove("load-hidden");
+                });
+
+                this.textContent = "View Less";
+                this.dataset.expanded = "true";
+
+            }else{
+
+                visibleProjects.forEach((item,index)=>{
+
+                    if(index>=INITIAL_VISIBLE){
+                        item.classList.add("load-hidden");
+                    }
+
+                });
+
+                this.textContent = "Load More Projects";
+                this.dataset.expanded = "false";
+
+                document.querySelector(".load-more-wrap").scrollIntoView({
+                    behavior:"smooth",
+                    block:"center"
+                });
+
+            }
+
+        });
+  </script>
+
+  {% endblock %}
+
+</body>
+</html>
